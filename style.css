@@ -113,15 +113,50 @@ body {
   background: #3498db;
   color: #fff;
 }
-
 .contact {
   padding: 60px 40px;
   text-align: center;
 }
-
 .site-footer {
   background: #2c3e50;
   color: #fff;
   text-align: center;
   padding: 20px;
+}
+.feature-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 6px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+.feature-card:nth-child(2) { animation-delay: 0.15s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-nav a:hover {
+  color: #3498db;
+  border-bottom: 2px solid #3498db;
+  transition: 0.2s;
+}
+
+.pricing-card {
+  transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+  transform: scale(1.03);
 }
